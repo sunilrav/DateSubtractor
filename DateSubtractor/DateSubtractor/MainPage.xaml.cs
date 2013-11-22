@@ -13,18 +13,31 @@ namespace DateSubtractor
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        Fields fields;
         // Constructor
         public MainPage()
         {
             InitializeComponent();
 
             // Sample code to localize the ApplicationBar
-            //BuildLocalizedApplicationBar();
+            //BuildLocalizedApplicationBar();            
+        }
 
-            Result result = new Result();
-            result.ResultDate = DateTime.Now;
+        protected override void OnNavigatedTo(NavigationEventArgs e) 
+        {
+            fields = new Fields 
+            {
+                StartDate = DateTime.Now,
+                NumDays = 0,
+                ResultDate = DateTime.Now
+            };
 
-            ResultPanel.DataContext = result;
+            ResultPanel.DataContext = fields;
+        }
+
+        private void GetResultButton_Click(object sender, RoutedEventArgs e)
+        {
+            fields.ResultDate = fields.StartDate.AddDays(fields.NumDays);
         }
 
         // Sample code for building a localized ApplicationBar
