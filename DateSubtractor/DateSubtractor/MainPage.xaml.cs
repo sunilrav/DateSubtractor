@@ -20,6 +20,11 @@ namespace DateSubtractor
 
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
+
+            Result result = new Result();
+            result.ResultDate = DateTime.Now;
+
+            ResultPanel.DataContext = result;
         }
 
         // Sample code for building a localized ApplicationBar

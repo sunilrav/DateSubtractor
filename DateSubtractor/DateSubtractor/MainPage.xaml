@@ -48,7 +48,11 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <toolkit:DatePicker/>
+            <StackPanel x:Name="ResultPanel">
+                <toolkit:DatePicker x:Name="StartDatePicker"/>
+                <TextBox x:Name="NumOfDaysTextBox"/>
+                <TextBlock x:Name="ResultTextBlock" Text="{Binding ResultDate}"/>
+            </StackPanel>            
         </Grid>
 
         <!--Uncomment to see an alignment grid to help ensure your controls are
