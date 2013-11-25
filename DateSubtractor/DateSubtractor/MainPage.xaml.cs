@@ -19,25 +19,32 @@ namespace DateSubtractor
         {
             InitializeComponent();
 
+            fields = new Fields
+            {
+                StartDate = DateTime.Now,
+                NumDays = 10,
+                ResultDate = DateTime.Now
+            };
+
+
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();            
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e) 
         {
-            fields = new Fields 
-            {
-                StartDate = DateTime.Now,
-                NumDays = 0,
-                ResultDate = DateTime.Now
-            };
-
             ResultPanel.DataContext = fields;
         }
 
         private void GetResultButton_Click(object sender, RoutedEventArgs e)
         {
             fields.ResultDate = fields.StartDate.AddDays(fields.NumDays);
+        }
+
+        private void StartDatePicker_ValueChanged(object sender, DateTimeValueChangedEventArgs e)
+        {
+            if (e.NewDateTime != null)
+                fields.StartDate = (DateTime)e.NewDateTime;
         }
 
         // Sample code for building a localized ApplicationBar
