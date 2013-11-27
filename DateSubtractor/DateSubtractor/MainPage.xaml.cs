@@ -23,7 +23,7 @@ namespace DateSubtractor
             {
                 StartDate = DateTime.Now,
                 NumDays = 10,
-                ResultDate = DateTime.Now
+                ResultDate = DateTime.Now.AddDays(10).ToShortDateString()
             };
 
 
@@ -38,7 +38,7 @@ namespace DateSubtractor
 
         private void GetResultButton_Click(object sender, RoutedEventArgs e)
         {
-            fields.ResultDate = fields.StartDate.AddDays(fields.NumDays);
+            fields.ResultDate = fields.StartDate.AddDays(fields.NumDays).ToShortDateString();
         }
 
         private void StartDatePicker_ValueChanged(object sender, DateTimeValueChangedEventArgs e)

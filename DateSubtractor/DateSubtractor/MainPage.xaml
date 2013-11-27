@@ -48,9 +48,15 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <StackPanel x:Name="ResultPanel">
+                <TextBlock Text="Start Date" Style="{StaticResource PhoneTextSmallStyle}"/>
                 <toolkit:DatePicker x:Name="StartDatePicker" Value="{Binding StartDate, Mode=TwoWay}" ValueChanged="StartDatePicker_ValueChanged"/>
-                <TextBox x:Name="NumOfDaysTextBox" Text="{Binding NumDays, Mode=TwoWay}"/>
-                <TextBlock x:Name="ResultTextBlock" Text="{Binding ResultDate}"/>
+                
+                <TextBlock Text="Num of days to add" Style="{StaticResource PhoneTextSmallStyle}"/>
+                <TextBox x:Name="NumOfDaysTextBox" MaxLength="4" InputScope="Number" Text="{Binding NumDays, Mode=TwoWay}"/>               
+
+                <TextBlock Text="Result Date" Style="{StaticResource PhoneTextSmallStyle}"/>
+                <TextBlock x:Name="ResultTextBlock" Text="{Binding ResultDate}" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                
                 <Button x:Name="GetResultButton" Click="GetResultButton_Click">Go</Button>
             </StackPanel>            
         </Grid>

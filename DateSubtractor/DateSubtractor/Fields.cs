@@ -31,8 +31,8 @@ namespace DateSubtractor
             }
         }
 
-        private DateTime resultDate;
-        public DateTime ResultDate
+        private string resultDate;
+        public string ResultDate
         {
             get { return resultDate; }
             set
