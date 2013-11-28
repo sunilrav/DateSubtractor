@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
-  <App xmlns="" ProductID="{57e5dc14-8ba5-4562-842e-d56ca78851d3}" Title="What's the date in X days" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="DateSubtractor author" Description="This app is simple tool to calculate the date after a given number of days." Publisher="DateSubtractor" PublisherID="{96568404-36cf-47d3-8c9f-20126a42b4ea}">
+  <App xmlns="" ProductID="{57e5dc14-8ba5-4562-842e-d56ca78851d3}" Title="Date in X days" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="DateSubtractor author" Description="This app is simple tool to calculate the date after a given number of days." Publisher="DateSubtractor" PublisherID="{96568404-36cf-47d3-8c9f-20126a42b4ea}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
@@ -19,7 +19,7 @@
           <SmallImageURI IsRelative="true" IsResource="false">Assets\FlipCycleTileSmall.png</SmallImageURI>
           <Count>0</Count>
           <BackgroundImageURI IsRelative="true" IsResource="false">Assets\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>What's the date in X days</Title>
+          <Title>Date in X days</Title>
           <BackContent>
           </BackContent>
           <BackBackgroundImageURI>
